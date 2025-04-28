@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [namesong, setNameSong] = useState("");
   const [autor, setAutor] = useState("");
   const [url, setUrl] = useState("");
