@@ -7,6 +7,7 @@ import {
   PlayCircle,
   PauseCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 interface Song {
   title: string;
@@ -73,10 +74,12 @@ export function Player({ songList = defaultSongs }: { songList?: Song[] }) {
 
   return (
     <div className="max-w-sm mx-auto mt-12 bg-white rounded-xl shadow p-6 flex flex-col items-center">
-      <img
+      <Image
         src={song.img}
         alt={song.title}
-        className="w-40 h-40 object-cover rounded-md mb-4"
+        width={160}
+        height={224}
+        className="object-cover rounded-md"
       />
       <h3 className="text-lg font-semibold">{song.title}</h3>
       <p className="text-gray-500 text-sm mb-4">{song.artist}</p>
