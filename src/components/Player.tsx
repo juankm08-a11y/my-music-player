@@ -106,13 +106,13 @@ export function Player({ songList = defaultSongs }: { songList?: Song[] }) {
       <div className="flex items-center space-x-6">
         <button
           onClick={handlePrev}
-          className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
+          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={() => setPlaying((p) => !p)}
-          className="p-3 bg-indigo-500 rounded-full hover:bg-indigo-600 transition"
+          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
           aria-label={playing ? "Pausar" : "Reproducir"}
         >
           {playing ? (
@@ -123,7 +123,7 @@ export function Player({ songList = defaultSongs }: { songList?: Song[] }) {
         </button>
         <button
           onClick={handleNext}
-          className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
+          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
         >
           <ChevronRight size={24} />
         </button>
