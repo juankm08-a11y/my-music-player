@@ -61,7 +61,11 @@ export function Player({ songList = defaultSongs }: { songList?: Song[] }) {
   useEffect(() => {
     const a = audioRef.current;
     if (!a) return;
-    playing ? a.play() : a.pause();
+    if (playing) {
+      a.play();
+    } else {
+      a.pause();
+    }
   }, [playing, idx]);
 
   const handlePrev = () => setIdx((i) => (i > 0 ? i - 1 : songList.length - 1));
