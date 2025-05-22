@@ -1,38 +1,24 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+export default {
   content: [
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#3B82F6",
-          light: "#60A5FA",
-          dark: "#1E40AF",
-        },
-        accent: {
-          DEFAULT: "#10B981",
-          light: "#34D399",
-          dark: "#047857",
-        },
-        surface: "#FFFFFF",
-        muted: "#F3F4F6",
-      },
-      spacing: {
-        nav: "5rem",
-      },
-      boxShadow: {
-        card: "0 4px 20px rgba(0,0,0,0.1)",
-      },
-      borderRadius: {
-        xl: "1rem",
+        primary: "hsl(var(--primary))",
+        secondary: "hsl(var(--secondary))",
+        accent: "hsl(var(--accent))",
+        info: "hsl(var(--info))",
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        danger: "hsl(var(--danger))",
+        muted: "hsl(var(--muted))",
       },
     },
   },
   plugins: [],
-};
-
-export default config;
+} satisfies Config;
