@@ -77,7 +77,7 @@ export function Player({ songList = defaultSongs }: { songList?: Song[] }) {
   const song = songList[idx];
 
   return (
-    <div className="max-w-sm mx-auto mt-12 bg-white rounded-xl shadow p-6 flex flex-col items-center">
+    <div className="max-w-sm mx-auto mt-12 bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center">
       <Image
         src={song.img}
         alt={song.title}

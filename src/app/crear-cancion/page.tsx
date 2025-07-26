@@ -22,16 +22,17 @@ export default function Page() {
     alert("Su cancion se guardo correctamente");
   };
   return (
-    <main className="flex justify-center items-center">
-      <section className="flex flex-col items-center border-2 w-full h-full">
-        <h1>Crear una cancion</h1>
+    <main className="flex justify-center items-center bg-amber-200">
+      <section className="flex flex-col gap-20 p-20 items-center border-2 w-full h-full">
+        <h1 className="text-2xl font-bold">Crear una cancion</h1>
         <label>
-          Nombre Cancion:
+          Nombre de la Cancion:
           <input
             onChange={handleChangeSong}
             value={namesong}
             type="text"
-            placeholder="ingresa el nombre de una cancion"
+            placeholder="Ingresa el nombre de una cancion"
+            className="w-[260px] p-1 border-1"
           />
         </label>
         <label>
@@ -40,7 +41,8 @@ export default function Page() {
             value={autor}
             onChange={handleChangeAutor}
             type="text"
-            placeholder="ingresa el nombre del autor"
+            placeholder="Ingresa el nombre del autor"
+            className="w-[260px] p-1 border-1"
           />
         </label>
         <label>
@@ -49,10 +51,13 @@ export default function Page() {
             value={url}
             onChange={handleChangeUrl}
             type="text"
-            placeholder="ingresa la url de la cancion"
+            placeholder="Ingresa la url de la cancion"
+            className="w-[260px] p-1 border-1"
           />
         </label>
-        <button onClick={handleSubmit}>Crear cancion</button>
+        <button onClick={handleSubmit} className="border-1">
+          Crear cancion
+        </button>
       </section>
     </main>
   );

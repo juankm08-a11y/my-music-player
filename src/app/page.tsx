@@ -22,8 +22,8 @@ export default function Home() {
             Crear-Cancion
           </Link>
         </nav>
+        <Player />
       </section>
-      <Player />
     </main>
   );
 }
